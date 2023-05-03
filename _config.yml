@@ -2,7 +2,11 @@ title: "#10DayWebBuild"
 description: "Join the #10DayWebBuild and build a new website over a period of 10 days while posting about it on social media every day."
 url: "https://10daywebbuild.netlify.app/"
 favicon: "assets/images/favicon.ico"
-image: "assets/images/logo.png"
+# logo: ""
+image:
+  path: "assets/images/preview.png"
+  height: 100
+  width: 100
 twitter:
   username: "SeaFilmz"
   card: "Join the #10DayWebBuild and build a new website over a period of 10 days while posting about it on social media every day."
@@ -11,7 +15,6 @@ email: ""
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
-#logo: 'assets/images/logo.png'
 author: ""
 paginate: 30
 #disqus: 'demowebsite'
