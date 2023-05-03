@@ -139,7 +139,7 @@ small, .small {
 ================================================== */
 .hero {
     background: #fdd93d;
-    padding: 5rem 5rem;
+    padding: 2rem 2rem;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -169,8 +169,29 @@ small, .small {
 }
 
 .hero h1 {
-    font-size:2.5em;
+    font-size: 6vw;
+    text-align: center;
 }
+@include media-breakpoint-up(sm) {
+    .hero h1 {
+        font-size: 2.5em;
+        text-align: left;
+    }
+}
+
+.hero .btn {
+    display: block;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+@include media-breakpoint-up(sm) {
+    .hero .btn {
+        display: inline-block;
+        padding-left: 5rem;
+        padding-right: 5rem;
+    }
+}
+
 .section-title h2 {
 	font-weight:700;
 	font-size:1.4rem;
@@ -615,4 +636,87 @@ span.navigation:before {
 .hover-opacity:hover {
     transition: all 0.3s;
     opacity:.8;
+}
+
+.web-build-left {
+    min-width: 100%;
+}
+.web-build-list {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    margin-top: 2.0rem;
+
+    li {
+        text-align: center;
+        margin-bottom: 2.0rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0rem;
+
+        &::before {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            content: attr(data-num);
+            width: 40px;
+            height: 40px;
+            background-color: #333741;
+            color: white;
+            position: relative;
+            margin: 0 auto 1.0rem;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-radius: 9999px;
+        }
+    }
+}
+
+@include media-breakpoint-up(xsm) {
+    .web-build-list {
+        margin-left: 1.0rem;
+
+        li {
+            text-align: left;
+            margin-left: 3.0rem;
+
+            &::before {
+                position: absolute;
+                left: calc(-3.0rem - 15px);
+                top: calc(50% - 20px);
+            }
+        }
+
+        &::before {
+            display: block;
+            content: '';
+            width: 0.6rem;
+            height: 100%;
+            background-color: #333741;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 9999px;
+        }
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .web-build-left {
+        min-width: 25.0rem;
+    }
+    .web-build-list {
+        margin-top: 0;
+    }
+}
+
+.faq {
+    h2, h3, h4, h5, h6, p {
+        margin-bottom: $spacer;
+    }
+    h2, h3, h4, h5, h6 {
+        margin-top: $spacer * 3;
+    }
 }
