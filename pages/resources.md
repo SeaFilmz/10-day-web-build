@@ -39,6 +39,7 @@ Below you can find links to free resources to help you build your website.
 **[ChakraUI](https://chakra-ui.com/)**  
 **[DaisyUI](https://daisyui.com/)**  
 
+{: #hosting}
 ## Website Hosting
 **[Cyclic](https://cyclic.sh/)**  
 **[Render](https://render.com/)**  
