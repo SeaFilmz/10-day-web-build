@@ -1,0 +1,108 @@
+---
+layout: default
+---
+<h1 class="my-4">{{ page.display_name }}&apos;s 10 Day Web Builds</h1>
+
+<div class="d-flex flex-column flex-md-row gap-4 align-items-start">
+  <section class="author-sidebar d-flex flex-column rounded mb-4 mb-sm-0 shadow">
+    <h2 class="author-sidebar__name">{{ page.display_name }}</h2>
+    <img
+      src="/assets/images/community/{{ page.slug }}/{{ page.image }}"
+      class="author-sidebar__image rounded-pill"
+    />
+
+    <h3 class="text-center text-md-start">About Me</h3>
+    <div class="author-description">
+      {{ page.about | strip_html | markdownify }}
+    </div>
+
+    <h3 class="text-center text-md-start">Socials</h3>
+    <div class="text-center text-md-start">
+      {% if page.socials.github %}
+        <a
+          href="{{ page.socials.github }}"
+          title="Visit {{ page.display_name }}'s GitHub"
+          class="author-sidebar__social"
+        >
+          <i class="bi-github"></i>
+        </a>
+      {% endif %}
+
+      {% if page.socials.twitter %}
+        <a
+          href="{{ page.socials.twitter }}"
+          title="Visit {{ page.display_name }}'s Twitter"
+          class="author-sidebar__social"
+        >
+          <i class="bi-twitter"></i>
+        </a>
+      {% endif %}
+
+      {% if page.socials.linkedin %}
+        <a
+          href="{{ page.socials.linkedin }}"
+          title="Visit {{ page.display_name }}'s LinkedIn"
+          class="author-sidebar__social"
+        >
+          <i class="bi-linkedin"></i>
+        </a>
+      {% endif %}
+
+      {% if page.socials.facebook %}
+        <a
+          href="{{ page.socials.facebook }}"
+          title="Visit {{ page.display_name }}'s Facebook"
+          class="author-sidebar__social"
+        >
+          <i class="bi-facebook"></i>
+        </a>
+      {% endif %}
+
+      {% if page.socials.mastodon %}
+        <a
+          href="{{ page.socials.mastodon }}"
+          title="Visit {{ page.display_name }}'s Mastodon"
+          class="author-sidebar__social"
+        >
+          <i class="bi-mastodon"></i>
+        </a>
+      {% endif %}
+
+      {% if page.socials.bluesky %}
+        <a
+          href="{{ page.socials.bluesky }}"
+          title="Visit {{ page.display_name }}'s Bluesky"
+          class="author-sidebar__social"
+        >
+          <i class="bi-square-fill"></i>
+        </a>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="web-builds row row-cols-1 row-cols-xl-2 text-center text-md-start">
+    {% for project in page.projects %}
+      <div class="web-build col mb-4">
+        <div class="card px-0 shadow">
+          {% if project.image %}
+            <img src="/assets/images/community/{{ page.slug }}/{{ project.image }}" class="rounded-top mb-2" />
+          {% elsif project.video %}
+            <video src="/assets/images/community/{{ page.slug }}/{{ project.video }}" controls class="rounded-top mb-2"></video>
+          {% endif %}
+          <div class="card-body">
+            <h3 class="card-title">{{ project.name }}</h3>
+            <p class="card-text">{{ project.description | strip_html | markdownify }}</p>
+            <div class="web-build__links d-flex gap-1 gap-md-4 justify-content-center flex-column flex-md-row">
+              {% if project.url %}
+                <a href="{{ project.url }}" class="web-build__site-link btn btn-primary d-flex justify-content-center align-items-center">Live Site</a> 
+              {% endif %}
+              {% if project.repo_url %}
+                <a href="{{ project.repo_url }}" class="web-build__repo-link btn btn-primary d-flex justify-content-center align-items-center">Repo</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+</div>

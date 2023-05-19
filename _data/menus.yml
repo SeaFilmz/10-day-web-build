@@ -10,6 +10,9 @@ topmenu:
 - title: Resources
   url: "resources/"
 
+- title: Community
+  url: "community/"
+
 # Footer Menu
 footermenu:
 
@@ -21,3 +24,6 @@ footermenu:
 
 - title: Resources
   url: "resources/"
+
+- title: Community
+  url: "community/"

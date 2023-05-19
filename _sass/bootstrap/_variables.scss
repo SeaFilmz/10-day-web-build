@@ -306,11 +306,12 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+$hero-color: #ffc14e;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
 $theme-colors: (
-  "primary":    $primary,
+  "primary":    $hero-color,
   "secondary":  $secondary,
   "success":    $success,
   "info":       $info,
