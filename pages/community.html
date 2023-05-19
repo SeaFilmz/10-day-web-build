@@ -1,0 +1,34 @@
+---
+title: Community
+layout: page
+permalink: "/community/"
+---
+
+<p>See what others are building for their #10DayWebBuild.</p>
+
+<p>Want to submit your project? Please read the <a href="#">contributing guidelines</a> on the GitHub repository.</p>
+
+<div class="community-members d-flex flex-wrap gap-4">
+	{% for member in site.community %}
+		<div class="community-member">
+			<a
+				href="{{ site.baseUrl }}{{ member.url }}"
+				title="View {{ member.name }}"
+				class="community-member__img-link d-block rounded-pill overflow-hidden border border-3 border-primary shadow-none mx-auto"
+			>
+				<img
+					src="/assets/images/community/{{ member.slug }}/{{ member.image }}"
+					alt="#"
+					class="community-member__image"
+				/>
+			</a>
+			<a
+				href={{ site.baseUrl }}{{ member.url }}"
+				title="View {{ member.name }}"
+				class="community-member__name d-block text-center font-weight-bold shadow-none"
+			>
+				{{ member.name }}
+			</a>
+		</div>
+	{% endfor %}
+</div>

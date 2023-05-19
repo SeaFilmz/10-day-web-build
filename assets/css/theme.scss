@@ -6,7 +6,6 @@
 $green:   #08a057 !default;
 $blue:    #3d61fd !default;
 $link-color: rgb(255, 177, 31);
-$hero-color: #ffc14e;
 
 @import 'bootstrap/bootstrap';
 
@@ -747,5 +746,106 @@ span.navigation:before {
 @include media-breakpoint-up(lg) {
     .list-col-3 {
         column-count: 3;
+    }
+}
+
+.author-sidebar {
+    background-color: $hero-color;
+    padding: 1rem;
+}
+
+.author-sidebar__name {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.author-sidebar__image {
+    margin-bottom: 1rem;
+}
+
+
+.author-sidebar h3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: block;
+}
+
+.author-sidebar .author-description a {
+    text-decoration: underline;
+}
+
+.author-sidebar__social {
+    font-size: 1.2rem;
+    margin-right: 0.4rem;
+}
+
+.web-builds {
+
+}
+
+.web-build {
+
+}
+
+.web-build__links .web-build__site-link::before,
+.web-build__links .web-build__repo-link::before {
+    display: inline-block;
+    padding-right: 0.8rem;
+    font-family: bootstrap-icons;
+    font-size: 1.2rem;
+}
+.web-build__links .web-build__site-link::before {
+    content: "\f470";
+}
+.web-build__links .web-build__repo-link::before {
+    content: "\f69d";
+}
+
+.community-member__img-link,
+.community-member__image {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 64px;
+}
+
+.community-member__img-link {
+    margin-right: $spacer;
+}
+
+.community-member__name {
+    width: 8.0rem;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+
+@include media-breakpoint-up(sm) {
+    .author-sidebar {
+        padding: 1rem 2rem;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .author-sidebar {
+        flex-shrink: 0;
+        width: 16rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    .author-sidebar {
+        width: 21rem;
+    }
+}
+
+@include media-breakpoint-up(xl) {
+    .author-sidebar {
+        width: 16rem;
+    }
+}
+
+@include media-breakpoint-up(xxl) {
+    .author-sidebar {
+        width: 21rem;
     }
 }
