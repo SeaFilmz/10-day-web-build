@@ -2,6 +2,7 @@
 layout: author
 
 name: intelagense
+display_name: intelagense
 image: profile.png
 about: "Software Engineer. Full stack developer at [#100devs](https://twitter.com/search?q=%23100Devs&src=hashtag_click)."
 

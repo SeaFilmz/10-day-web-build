@@ -2,6 +2,7 @@
 layout: author
 
 name: seafilmz
+display_name: SeaFilmz
 image: profile.png
 about: "Software Engineer, Database Dev & Movie Enthusiast \\| Developer of [http://seafilmz.com](http://seafilmz.com) \\| #100Devs Member"
 

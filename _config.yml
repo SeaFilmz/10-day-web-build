@@ -68,3 +68,6 @@ collections:
   community:
     output: true
     permalink: /community/:name
+exclude:
+  - _community/EXAMPLE.md
+  - _community/TEMPLATE.md

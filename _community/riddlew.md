@@ -2,6 +2,7 @@
 layout: author
 
 name: riddlew
+display_name: riddlew
 image: profile.bmp
 about: "Software Engineer with a Bachelor's degree in Software Development. Experienced with React, Typescript, Express, Postgres, and a little bit of Ruby on Rails."
 

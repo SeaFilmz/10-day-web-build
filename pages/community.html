@@ -13,7 +13,7 @@ permalink: "/community/"
 		<div class="community-member">
 			<a
 				href="{{ site.baseUrl }}{{ member.url }}"
-				title="View {{ member.name }}"
+				title="View {{ member.display_name }}"
 				class="community-member__img-link d-block rounded-pill overflow-hidden border border-3 border-primary shadow-none mx-auto"
 			>
 				<img
@@ -24,10 +24,10 @@ permalink: "/community/"
 			</a>
 			<a
 				href={{ site.baseUrl }}{{ member.url }}"
-				title="View {{ member.name }}"
+				title="View {{ member.display_name }}"
 				class="community-member__name d-block text-center font-weight-bold shadow-none"
 			>
-				{{ member.name }}
+				{{ member.display_name }}
 			</a>
 		</div>
 	{% endfor %}

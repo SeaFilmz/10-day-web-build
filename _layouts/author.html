@@ -1,11 +1,11 @@
 ---
 layout: default
 ---
-<h1 class="my-4">{{ page.name }}&apos;s 10 Day Web Builds</h1>
+<h1 class="my-4">{{ page.display_name }}&apos;s 10 Day Web Builds</h1>
 
 <div class="d-flex flex-column flex-md-row gap-4 align-items-start">
   <section class="author-sidebar d-flex flex-column rounded mb-4 mb-sm-0 shadow">
-    <h2 class="author-sidebar__name">{{ page.name }}</h2>
+    <h2 class="author-sidebar__name">{{ page.display_name }}</h2>
     <img
       src="/assets/images/community/{{ page.slug }}/{{ page.image }}"
       class="author-sidebar__image rounded-pill"
@@ -21,7 +21,7 @@ layout: default
       {% if page.socials.github %}
         <a
           href="{{ page.socials.github }}"
-          title="Visit {{ page.name }}'s GitHub"
+          title="Visit {{ page.display_name }}'s GitHub"
           class="author-sidebar__social"
         >
           <i class="bi-github"></i>
@@ -31,7 +31,7 @@ layout: default
       {% if page.socials.twitter %}
         <a
           href="{{ page.socials.twitter }}"
-          title="Visit {{ page.name }}'s Twitter"
+          title="Visit {{ page.display_name }}'s Twitter"
           class="author-sidebar__social"
         >
           <i class="bi-twitter"></i>
@@ -41,7 +41,7 @@ layout: default
       {% if page.socials.linkedin %}
         <a
           href="{{ page.socials.linkedin }}"
-          title="Visit {{ page.name }}'s LinkedIn"
+          title="Visit {{ page.display_name }}'s LinkedIn"
           class="author-sidebar__social"
         >
           <i class="bi-linkedin"></i>
@@ -51,7 +51,7 @@ layout: default
       {% if page.socials.facebook %}
         <a
           href="{{ page.socials.facebook }}"
-          title="Visit {{ page.name }}'s Facebook"
+          title="Visit {{ page.display_name }}'s Facebook"
           class="author-sidebar__social"
         >
           <i class="bi-facebook"></i>
@@ -61,7 +61,7 @@ layout: default
       {% if page.socials.mastodon %}
         <a
           href="{{ page.socials.mastodon }}"
-          title="Visit {{ page.name }}'s Mastodon"
+          title="Visit {{ page.display_name }}'s Mastodon"
           class="author-sidebar__social"
         >
           <i class="bi-mastodon"></i>
@@ -71,7 +71,7 @@ layout: default
       {% if page.socials.bluesky %}
         <a
           href="{{ page.socials.bluesky }}"
-          title="Visit {{ page.name }}'s Bluesky"
+          title="Visit {{ page.display_name }}'s Bluesky"
           class="author-sidebar__social"
         >
           <i class="bi-square-fill"></i>
